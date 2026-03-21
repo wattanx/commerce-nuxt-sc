@@ -30,7 +30,7 @@ export function useCart() {
     onResponse({ response }) {
       items.value = toCartItems(response._data || []);
     },
-    lazy: true,
+    immediate: true,
   });
 
   async function addItem(product: Product, size: string, quantity = 1) {
