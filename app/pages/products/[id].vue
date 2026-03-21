@@ -23,7 +23,7 @@ const sizes = ["XS", "S", "M", "L", "XL"];
             :src="product.image"
             :alt="product.name"
             class="w-full max-h-[50vh] object-contain"
-          />
+          >
         </div>
 
         <!-- Details -->

@@ -12,8 +12,8 @@ defineProps<{
       <img
         :src="product.image"
         :alt="product.name"
-        class="w-full aspect-[3/4] object-cover transition-transform duration-300 group-hover:scale-105"
-      />
+        class="w-full aspect-3/4 object-cover transition-transform duration-300 group-hover:scale-105"
+      >
     </div>
     <div class="mt-3 space-y-1">
       <UBadge :label="product.category" variant="subtle" size="xs" />
