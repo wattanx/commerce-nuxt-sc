@@ -15,19 +15,19 @@ const sizes = ['XS', 'S', 'M', 'L', 'XL']
 
 <template>
   <div>
-    <div class="max-w-6xl mx-auto px-4 py-6">
-      <div class="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8">
         <!-- Image -->
         <div>
           <img
             :src="product.image"
             :alt="product.name"
-            class="w-full object-cover sticky top-20"
+            class="w-full max-h-[50vh] object-contain"
           />
         </div>
 
         <!-- Details -->
-        <div class="space-y-6">
+        <div class="space-y-4">
           <div>
             <UBadge :label="product.category" variant="subtle" class="mb-2" />
             <h1 class="text-2xl font-semibold">

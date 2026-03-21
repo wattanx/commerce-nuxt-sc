@@ -9,13 +9,16 @@ const recommended = computed(() =>
 </script>
 
 <template>
-  <UPageSection title="Recommended for You" description="Based on your interests">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div class="max-w-6xl mx-auto px-4 py-6">
+    <h2 class="text-lg font-semibold mb-4">
+      Recommended for You
+    </h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
       <ProductCard
         v-for="product in recommended"
         :key="product.id"
         :product="product"
       />
     </div>
-  </UPageSection>
+  </div>
 </template>

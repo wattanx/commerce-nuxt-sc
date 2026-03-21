@@ -17,10 +17,7 @@ export default defineNuxtConfig({
     oauth: {
       github: {
         clientId: '',
-        clientSecret: '',
-        redirectURL: '',
-        authorizationURL: '',
-        tokenURL: ''
+        clientSecret: ''
       }
     }
   },

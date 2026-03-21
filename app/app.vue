@@ -11,7 +11,7 @@ useHead({
   }
 })
 
-const title = 'Commerce Shop'
+const title = 'Demo Store'
 const description = 'A simple e-commerce shop built with Nuxt UI.'
 
 useSeoMeta({
@@ -27,7 +27,7 @@ useSeoMeta({
     <UHeader>
       <template #left>
         <NuxtLink to="/" class="font-bold text-lg">
-          Commerce Shop
+          Demo Store
         </NuxtLink>
       </template>
 
@@ -46,7 +46,7 @@ useSeoMeta({
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          Commerce Shop • © {{ new Date().getFullYear() }}
+          Demo Store • © {{ new Date().getFullYear() }}
         </p>
       </template>
     </UFooter>
