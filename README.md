@@ -1,43 +1,36 @@
-# Nuxt Starter Template
+# Demo Store
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+A simple e-commerce demo app built with Nuxt 4 and Nuxt UI.
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+## Features
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
-
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png" width="830" height="466">
-  </picture>
-</a>
-
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
-
-## Quick Start
-
-```bash [Terminal]
-npm create nuxt@latest -- -t ui
-```
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
+- Product listing and detail pages
+- GitHub OAuth login
+- Recommended products (visible only when logged in)
 
 ## Setup
 
-Make sure to install the dependencies:
+Install dependencies:
 
 ```bash
 pnpm install
 ```
 
-## Development Server
+Copy `.env.example` to `.env` and set your GitHub OAuth credentials:
 
-Start the development server on `http://localhost:3000`:
+```bash
+cp .env.example .env
+```
+
+| Variable | Description |
+|---|---|
+| `NUXT_SESSION_PASSWORD` | Session encryption key (32+ characters) |
+| `NUXT_OAUTH_GITHUB_CLIENT_ID` | GitHub OAuth App Client ID |
+| `NUXT_OAUTH_GITHUB_CLIENT_SECRET` | GitHub OAuth App Client Secret |
+
+> GitHub App の callback URL には `http://localhost:3000/auth/github` を設定してください。
+
+## Development
 
 ```bash
 pnpm dev
@@ -45,16 +38,7 @@ pnpm dev
 
 ## Production
 
-Build the application for production:
-
 ```bash
 pnpm build
-```
-
-Locally preview production build:
-
-```bash
 pnpm preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
