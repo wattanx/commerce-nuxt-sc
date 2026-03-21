@@ -1,16 +1,16 @@
 <script setup lang="ts">
-const route = useRoute()
-const productId = Number(route.params.id)
-const product = products.find(p => p.id === productId)
+const route = useRoute();
+const productId = Number(route.params.id);
+const product = products.find((p) => p.id === productId);
 
 if (!product) {
-  throw createError({ statusCode: 404, statusMessage: 'Product not found' })
+  throw createError({ statusCode: 404, statusMessage: "Product not found" });
 }
 
-const { loggedIn } = useUserSession()
+const { loggedIn } = useUserSession();
 
-const selectedSize = ref('')
-const sizes = ['XS', 'S', 'M', 'L', 'XL']
+const selectedSize = ref("");
+const sizes = ["XS", "S", "M", "L", "XL"];
 </script>
 
 <template>
@@ -43,9 +43,7 @@ const sizes = ['XS', 'S', 'M', 'L', 'XL']
 
           <!-- Size selector -->
           <div class="space-y-3">
-            <p class="text-sm font-medium uppercase tracking-wider">
-              Size
-            </p>
+            <p class="text-sm font-medium uppercase tracking-wider">Size</p>
             <div class="flex gap-2">
               <UButton
                 v-for="size in sizes"
@@ -62,20 +60,13 @@ const sizes = ['XS', 'S', 'M', 'L', 'XL']
           <USeparator />
 
           <!-- Add to cart -->
-          <UButton
-            label="ADD TO CART"
-            icon="i-lucide-shopping-bag"
-            size="xl"
-            block
-          />
+          <UButton label="ADD TO CART" icon="i-lucide-shopping-bag" size="xl" block />
 
           <USeparator />
 
           <!-- Description -->
           <div class="space-y-2">
-            <p class="text-sm font-medium uppercase tracking-wider">
-              Description
-            </p>
+            <p class="text-sm font-medium uppercase tracking-wider">Description</p>
             <p class="text-sm text-muted leading-relaxed">
               {{ product.description }}
             </p>

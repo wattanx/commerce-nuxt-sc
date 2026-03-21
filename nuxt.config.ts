@@ -1,41 +1,41 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/eslint',
-    '@nuxt/ui',
-    '@nuxt/a11y',
-    '@nuxt/scripts',
-    '@nuxt/test-utils',
-    'nuxt-auth-utils'
+    "@nuxt/eslint",
+    "@nuxt/ui",
+    "@nuxt/a11y",
+    "@nuxt/scripts",
+    "@nuxt/test-utils",
+    "nuxt-auth-utils",
   ],
 
   devtools: {
-    enabled: true
+    enabled: true,
   },
 
   runtimeConfig: {
     oauth: {
       github: {
-        clientId: '',
-        clientSecret: ''
-      }
-    }
+        clientId: "",
+        clientSecret: "",
+      },
+    },
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ["~/assets/css/main.css"],
 
   routeRules: {
-    '/': { prerender: true }
+    "/": { prerender: true },
   },
 
-  compatibilityDate: '2025-01-15',
+  compatibilityDate: "2025-01-15",
 
   eslint: {
     config: {
       stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
-  }
-})
+        commaDangle: "never",
+        braceStyle: "1tbs",
+      },
+    },
+  },
+});
