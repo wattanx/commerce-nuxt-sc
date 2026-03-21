@@ -11,6 +11,8 @@ const { loggedIn } = useUserSession();
 
 const selectedSize = ref("");
 const sizes = ["XS", "S", "M", "L", "XL"];
+
+const { addItem } = useCart();
 </script>
 
 <template>
@@ -60,7 +62,14 @@ const sizes = ["XS", "S", "M", "L", "XL"];
           <USeparator />
 
           <!-- Add to cart -->
-          <UButton label="ADD TO CART" icon="i-lucide-shopping-bag" size="xl" block />
+          <UButton
+            label="ADD TO CART"
+            icon="i-lucide-shopping-bag"
+            size="xl"
+            block
+            :disabled="!selectedSize"
+            @click="addItem(product, selectedSize, 1)"
+          />
 
           <USeparator />
 

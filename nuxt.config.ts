@@ -32,7 +32,7 @@ export default defineNuxtConfig({
 
   eslint: {
     config: {
-      stylistic: false
+      stylistic: false,
     },
   },
   nitro: {
@@ -44,6 +44,19 @@ export default defineNuxtConfig({
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
+    },
+
+    storage: {
+      cart: {
+        driver: "cloudflare-kv-binding",
+        binding: "CART_KV",
+      },
+    },
+    devStorage: {
+      cart: {
+        driver: "fs",
+        base: ".data/cart",
+      },
     },
   },
 });

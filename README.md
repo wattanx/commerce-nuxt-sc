@@ -22,11 +22,11 @@ Copy `.env.example` to `.env` and set your GitHub OAuth credentials:
 cp .env.example .env
 ```
 
-| Variable | Description |
-|---|---|
-| `NUXT_SESSION_PASSWORD` | Session encryption key (32+ characters) |
-| `NUXT_OAUTH_GITHUB_CLIENT_ID` | GitHub OAuth App Client ID |
-| `NUXT_OAUTH_GITHUB_CLIENT_SECRET` | GitHub OAuth App Client Secret |
+| Variable                          | Description                             |
+| --------------------------------- | --------------------------------------- |
+| `NUXT_SESSION_PASSWORD`           | Session encryption key (32+ characters) |
+| `NUXT_OAUTH_GITHUB_CLIENT_ID`     | GitHub OAuth App Client ID              |
+| `NUXT_OAUTH_GITHUB_CLIENT_SECRET` | GitHub OAuth App Client Secret          |
 
 > GitHub App の callback URL には `http://localhost:3000/auth/github` を設定してください。
 
