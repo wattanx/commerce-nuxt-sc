@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     "@nuxt/test-utils",
     "nuxt-auth-utils",
   ],
+  experimental: {
+    componentIslands: true,
+  },
 
   devtools: {
     enabled: true,
