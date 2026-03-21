@@ -1,9 +1,3 @@
-import item1 from "~/assets/images/item_1.png";
-import item2 from "~/assets/images/item_2.png";
-import item3 from "~/assets/images/item_3.png";
-import item4 from "~/assets/images/item_4.png";
-import item5 from "~/assets/images/item_5.png";
-
 export interface Product {
   id: number;
   name: string;
@@ -21,7 +15,7 @@ export const products: Product[] = [
       "A timeless white crew-neck t-shirt made from premium cotton. Comfortable and versatile for everyday wear.",
     price: 29,
     category: "Tops",
-    image: item1,
+    image: "/images/item_1.png",
   },
   {
     id: 2,
@@ -30,7 +24,7 @@ export const products: Product[] = [
       "Classic straight-fit denim jeans with a medium wash. Durable and stylish for any occasion.",
     price: 79,
     category: "Bottoms",
-    image: item2,
+    image: "/images/item_2.png",
   },
   {
     id: 3,
@@ -39,7 +33,7 @@ export const products: Product[] = [
       "A wardrobe staple black crew-neck t-shirt. Soft, breathable fabric with a relaxed fit.",
     price: 29,
     category: "Tops",
-    image: item3,
+    image: "/images/item_3.png",
   },
   {
     id: 4,
@@ -48,7 +42,7 @@ export const products: Product[] = [
       "A warm beige t-shirt with a relaxed silhouette. Perfect for layering or wearing on its own.",
     price: 34,
     category: "Tops",
-    image: item4,
+    image: "/images/item_4.png",
   },
   {
     id: 5,
@@ -57,7 +51,7 @@ export const products: Product[] = [
       "A refreshing light blue t-shirt crafted from soft cotton blend. Great for casual outings.",
     price: 34,
     category: "Tops",
-    image: item5,
+    image: "/images/item_5.png",
   },
 ];
 

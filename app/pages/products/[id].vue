@@ -90,7 +90,7 @@ const { addItem } = useCart();
           <USkeleton class="h-6 w-48 mb-4" />
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div v-for="i in 4" :key="i" class="space-y-3">
-              <USkeleton class="w-full aspect-3/4" />
+              <USkeleton class="w-full aspect-[3/4]" />
               <USkeleton class="h-4 w-16" />
               <USkeleton class="h-4 w-full" />
               <USkeleton class="h-4 w-12" />

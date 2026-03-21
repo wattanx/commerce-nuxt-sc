@@ -1,17 +1,15 @@
 <script setup lang="ts">
+import type { Product } from "~/utils/products";
+
 const props = defineProps<{
   currentProductId: number;
 }>();
 
 const event = useRequestEvent();
-const recommendedIds = await $fetch<number[]>("/api/recommendations", {
+const recommended = await $fetch<Product[]>("/api/recommendations", {
   params: { currentProductId: props.currentProductId },
   headers: event?.headers ?? {},
 });
-
-const recommended = recommendedIds
-  .map((id) => products.find((p) => p.id === id))
-  .filter((p) => p != null);
 </script>
 
 <template>

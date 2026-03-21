@@ -23,9 +23,9 @@ export default defineEventHandler(async (event) => {
   // Count categories in cart
   const categoryCounts = new Map<string, number>();
   for (const item of cartItems) {
-    const meta = productsMeta.find((p) => p.id === item.productId);
-    if (meta) {
-      categoryCounts.set(meta.category, (categoryCounts.get(meta.category) ?? 0) + item.quantity);
+    const product = products.find((p) => p.id === item.productId);
+    if (product) {
+      categoryCounts.set(product.category, (categoryCounts.get(product.category) ?? 0) + item.quantity);
     }
   }
 
@@ -34,7 +34,7 @@ export default defineEventHandler(async (event) => {
     .sort((a, b) => b[1] - a[1])
     .map(([category]) => category);
 
-  const candidates = productsMeta.filter((p) => !excludeIds.has(p.id));
+  const candidates = products.filter((p) => !excludeIds.has(p.id));
 
   // Prioritize products from cart's top categories
   const prioritized = candidates.sort((a, b) => {
@@ -45,5 +45,5 @@ export default defineEventHandler(async (event) => {
     return aPriority - bPriority;
   });
 
-  return prioritized.slice(0, 4).map((p) => p.id);
+  return prioritized.slice(0, 4);
 });
