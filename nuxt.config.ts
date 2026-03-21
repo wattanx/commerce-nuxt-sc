@@ -27,8 +27,11 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
 
-  routeRules: {
-    "/": { prerender: true },
+  $production: {
+    routeRules: {
+      "/": { prerender: true },
+      "/products/**": { prerender: true },
+    },
   },
 
   compatibilityDate: "2025-01-15",
@@ -41,6 +44,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       autoSubfolderIndex: false,
+      routes: ["/products/1", "/products/2", "/products/3", "/products/4", "/products/5"],
     },
     preset: "cloudflare_module",
 
