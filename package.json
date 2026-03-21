@@ -23,6 +23,7 @@
     "@nuxt/test-utils": "4.0.0",
     "@nuxt/ui": "^4.5.1",
     "nuxt": "^4.4.2",
+    "nuxt-auth-utils": "^0.5.29",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {

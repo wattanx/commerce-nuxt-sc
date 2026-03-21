@@ -4,13 +4,25 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxt/a11y',
-    '@nuxt/hints',
     '@nuxt/scripts',
-    '@nuxt/test-utils'
+    '@nuxt/test-utils',
+    'nuxt-auth-utils'
   ],
 
   devtools: {
     enabled: true
+  },
+
+  runtimeConfig: {
+    oauth: {
+      github: {
+        clientId: '',
+        clientSecret: '',
+        redirectURL: '',
+        authorizationURL: '',
+        tokenURL: ''
+      }
+    }
   },
 
   css: ['~/assets/css/main.css'],
