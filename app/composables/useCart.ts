@@ -44,7 +44,7 @@ export function useCart() {
   async function removeItem(index: number) {
     const data = await $fetch<ServerCartItem[]>("/api/cart", {
       method: "DELETE",
-      body: { index },
+      query: { index },
     });
     items.value = toCartItems(data);
   }

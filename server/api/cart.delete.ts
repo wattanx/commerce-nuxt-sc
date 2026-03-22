@@ -12,12 +12,13 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, statusMessage: "No session" });
   }
 
-  const body = await readBody<{ index: number }>(event);
+  const query = getQuery<{ index: string }>(event);
+  const index = Number(query.index);
 
   const storage = useStorage<CartItem[]>("cart");
   const items: CartItem[] = (await storage.getItem(sessionId)) ?? [];
 
-  items.splice(body.index, 1);
+  items.splice(index, 1);
 
   await storage.setItem(sessionId, items);
 
