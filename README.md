@@ -28,7 +28,7 @@ cp .env.example .env
 | `NUXT_OAUTH_GITHUB_CLIENT_ID`     | GitHub OAuth App Client ID              |
 | `NUXT_OAUTH_GITHUB_CLIENT_SECRET` | GitHub OAuth App Client Secret          |
 
-> GitHub App の callback URL には `http://localhost:3000/auth/github` を設定してください。
+> Set the callback URL of your GitHub OAuth App to `http://localhost:3000/auth/github`.
 
 ## Development
 
