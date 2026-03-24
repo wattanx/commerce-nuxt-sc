@@ -11,7 +11,6 @@ const { loggedIn, user, clear } = useUserSession();
     <UButton
       v-else
       to="/auth/github"
-      icon="i-simple-icons-github"
       label="Login"
       color="neutral"
       variant="ghost"

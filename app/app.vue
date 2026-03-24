@@ -40,7 +40,17 @@ useSeoMeta({
 
     <UFooter>
       <template #left>
-        <p class="text-sm text-muted">Demo Store • © {{ new Date().getFullYear() }}</p>
+        <p class="text-sm text-muted">Built by wattanx • © {{ new Date().getFullYear() }}</p>
+      </template>
+      <template #right>
+        <UButton
+          to="https://github.com/wattanx/commerce-nuxt-sc"
+          target="_blank"
+          icon="i-simple-icons-github"
+          color="neutral"
+          variant="ghost"
+          external
+        />
       </template>
     </UFooter>
   </UApp>
