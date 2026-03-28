@@ -26,6 +26,7 @@ useSeoMeta({
       </template>
 
       <template #right>
+        <GuideButton />
         <CartButton />
         <UColorModeButton />
         <LoginButton />
