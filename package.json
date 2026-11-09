@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.17.0",
-    "@vue/test-utils": "^2.4.6",
+    "@vue/test-utils": "^2.5.1",
     "eslint": "^10.14.0",
     "happy-dom": "^20.8.4",
     "oxfmt": "^0.41.0",
